@@ -5,7 +5,7 @@ from src.pce import (
     run_QCBO
 )
 from src.step_1 import model_to_obj
-
+from scipy.optimize import dual_annealing
 my_token = "YOUR_CONFIDENTIAL_TOKEN"
 my_instance = "YOUR_INSTANCE_CRN"
 LP_FILE_PATH = os.path.join('data', '31bonds.lp')
@@ -41,3 +41,11 @@ model_file = "data/1/31bonds/docplex-bin-avgonly-nocplexvars.lp"
 model: docplex.mp.model.Model = ModelReader.read(model_file)
 obj_fn = model_to_obj(model)
 print("benchmark cost",obj_fn(ideal_bitstring))
+#once the bitstring is found we do classical postprocessing to find best bitstring
+bounds = [(0, 1)] * len(ideal_bitstring)
+result = dual_annealing(obj_fn, bounds, x0=ideal_bitstring)
+refined_bitstring = np.round(result.x).astype(int)
+refined_cost = result.fun
+
+print(f"Final cost after Simulated Annealing: {refined_cost}")
+print(refined_bitstring)
