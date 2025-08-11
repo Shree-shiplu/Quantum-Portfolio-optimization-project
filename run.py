@@ -8,7 +8,7 @@ from src.step_1 import model_to_obj
 
 my_token = "YOUR_CONFIDENTIAL_TOKEN"
 my_instance = "YOUR_INSTANCE_CRN"
-LP_FILE_PATH = os.path.join('data', '31bonds', 'docplex-bin-avgonly-nocplexvars.lp')
+LP_FILE_PATH = os.path.join('data', '31bonds.lp')
 model = ModelReader.read(LP_FILE_PATH)
 Q,h,c,A,b,penalty = get_Q_h_c_A_b_penalty(model)
 
