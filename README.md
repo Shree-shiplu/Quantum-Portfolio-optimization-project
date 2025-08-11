@@ -27,7 +27,7 @@ Classical Optimization: Employs classical optimizers like L-BFGS-B to find the o
 
 2.  **Create a virtual environment** (recommended):
     ```bash
-    cd Vanguard_project
+    cd project
     python -m venv venv
     source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
     ```
