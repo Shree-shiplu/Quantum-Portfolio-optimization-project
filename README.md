@@ -1,5 +1,5 @@
-# Vanguard_project
-WISER Vanguard project
+project
+Quantum portfolio Optimization with liear constrain
 Quantum-Classical Hybrid Optimization for QCBO
 
 A Python project that uses a Variational Quantum Eigensolver (VQE) with Pauli correlation encoding to solve Quadratic Constrained Binary Optimization (QCBO) problems.
