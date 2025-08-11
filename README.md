@@ -21,7 +21,7 @@ Classical Optimization: Employs classical optimizers like L-BFGS-B to find the o
 
 1.  **Clone the repository:**
     ```bash
-    git clone [[https://github.com/your-username/your-repo-name.git](https://github.com/shrjawa/Vanguard_project.git)]([https://github.com/your-username/your-repo-name.git](https://github.com/shrjawa/Vanguard_project.git))
+    git clone [[[https://github.com/your-username/your-repo-name.git]([https://github.com/Shree-shiplu/Quantum-Portfolio-optimization-project]
     cd your-repo-name
     ```
 
